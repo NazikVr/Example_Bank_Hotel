@@ -1,0 +1,76 @@
+.propose {
+  &__title {
+    margin-bottom: 85px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__one {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+
+    @include onDesktop {
+      width: 33%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__one img {
+    object-position: 0 -15px;
+  }
+
+  &__two {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+
+    @include onDesktop {
+      width: 33%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__three {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    @include onDesktop {
+      width: 33%;
+    }
+  }
+
+  &__photo {
+    display: block;
+    width: 270px;
+    height: 270px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 40px;
+  }
+
+  &__text {
+    margin: 0 auto;
+    height: 100px;
+    font-size: $simple-text;
+    font-weight: 600;
+    max-width: 100%;
+  }
+}

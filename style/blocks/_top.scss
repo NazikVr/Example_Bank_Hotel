@@ -1,0 +1,174 @@
+.top {
+  height: 665px;
+  padding-top: 175px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../image/congress_hall-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include onSmallTablet {
+    padding-top: 180px;
+    padding-bottom: 50px;
+  }
+
+  @include onTablet {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+
+  @include onDesktop {
+    height: 100%;
+    padding-top: 130px;
+    padding-bottom: 75px;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    font-size: $main-title;
+    margin-bottom: 70px;
+
+    @include onSmallTablet {
+      // font-size: 45px;
+      margin-bottom: 70px;
+    }
+
+    @include onTablet {
+      // font-size: $main-title;
+      margin-bottom: 55px;
+    }
+
+    @include onDesktop {
+      font-size: $top-title;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    display: none;
+    font-weight: 500;
+    line-height: 150%;
+    color: #fff;
+    font-size: $sub-title;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include onSmallTablet {
+      margin-bottom: 35px;
+    }
+
+    @include onTablet {
+      display: block;
+      // font-size: 17px;
+      margin-bottom: 45px;
+    }
+
+    @include onDesktop {
+      text-align: left;
+      // font-size: 20px;
+      margin-bottom: 50px;
+    }
+
+    &--wedding {
+      font-weight: 600;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 33px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: $brown;
+    width: 50%;
+    height: 50px;
+    font-size: $simple-text;
+    margin: 0 auto 70px;
+
+    @include onSmallTablet {
+      width: 400px;
+      margin: 0 auto 80px;
+    }
+
+    @include onTablet {
+      // font-size: 20px;
+      width: 500px;
+      margin: 0 auto 60px;
+    }
+
+    @include onDesktop {
+      width: 374px;
+      height: 65px;
+      font-size: $sub-title;
+      margin-bottom: 70px;
+    }
+
+    border: 2px solid $brown;
+    transition: background-color, color, 0.3s;
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      color: $brown;
+    }
+  }
+
+  &__text {
+    display: none;
+    font-weight: 500;
+    font-size: $simple-text;
+    line-height: 150%;
+    color: #fff;
+    text-align: center;
+
+    @include onTablet {
+      display: block;
+      // font-size: 17px;
+    }
+
+    @include onDesktop {
+      width: 550px;
+      text-align: left;
+      // font-size: 20px;
+    }
+  }
+
+  &__call {
+    display: block;
+    font-weight: 500;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.8s ease;
+    margin-bottom: 10px;
+    font-size: $sub-title;
+    text-align: center;
+
+    @include onSmallTablet {
+      // font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    @include onTablet {
+      // font-size: 42px;
+      margin-bottom: 35px;
+    }
+
+    @include onDesktop {
+      text-align: left;
+      font-size: $main-title;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      color: $brown;
+    }
+  }
+}

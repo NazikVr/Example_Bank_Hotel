@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "utils/fonts";
+@import "utils/mixins";
+@import "utils/vars";
+@import "utils/extends";
+@import "utils/animations";
+@import "utils/grid";
+
+@import "blocks/page";
+@import "blocks/container";
+@import "blocks/title";
+@import "blocks/top";
+@import "blocks/top-slider-wedding";
+@import "blocks/top-wedding";
+@import "blocks/placement-scheme";
+@import "blocks/params";
+@import "blocks/conference-hall";
+@import "blocks/scheme";
+@import "blocks/menu";
+@import "blocks/propose";
+@import "blocks/projects";
+@import "blocks/form";
+@import "blocks/acordion";
+
+body {
+  // font-family: 'Futura PT' !important;
+  zoom: 0.9;
+  -moz-transform: scale(0.9);
+  -moz-transform-origin: 0 0;
+}
+
+// #ui-datepicker-div {
+//   position: relative !important;
+//   top: -1000px !important;
+//   left: 100px !important;
+
+//   @include onTablet {
+//     top: -1130px !important;
+//     left: 200px !important;
+//   }
+
+//   @include onDesktop {
+//     left: 300px !important;
+//     top: -850px !important;
+//   }
+// }
+
+.nav__drop {
+  text-align: center;
+  @include onTablet {
+    display: none;
+  }
+}
+
+.nav__noDrop {
+  display: none;
+
+  @include onTablet {
+    display: block;
+  }
+}
+
+.dropdown-toggle {
+  font-weight: 700 !important;
+  color: #fff !important;
+  background-color: $brown !important;
+  font-size: 1.5rem !important;
+}
+
+.dropdown-menu  .active {
+  background-color: #fff !important;
+  color: #000 !important;
+  font-weight: 500 !important;
+}
+
+.dropdown-menu .nav-item .nav-link:hover{
+  width: 100% !important;
+  border-radius: 0 !important;
+  background-color: $brown !important;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  &__content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  &__close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+

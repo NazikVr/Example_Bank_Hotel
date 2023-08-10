@@ -1,0 +1,112 @@
+.menu {
+  &__menu {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+
+    &--link {
+      text-decoration: none;
+      color: #fff;
+      background-color: rgba(192,155,120, 0);
+      width: 45%;
+      height: 40px;
+      font-size: $simple-text;
+      font-weight: 500;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $brown;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: rgba($color: $brown, $alpha: 0.95);
+        color: #fff;
+      }
+    }
+  }
+
+  &__left--wedding {
+    background-image: url(../image/menu-wedding/wedding.jpg);
+  }
+  
+  &__left--conference {
+    background-image: url(../image/menu-conference/left.png);
+    
+  }
+
+  &__left {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+
+    @include onTablet {
+      width: 50%;
+    }
+  }
+  
+  &__shadow {
+    padding: 10px 0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 320px;
+  }
+
+  &__rigth {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    @include onTablet {
+      width: 50%;
+    }
+  }
+
+  &__rigth--wedding {
+    background-image: url(../image/menu-wedding/banquet.jpg);
+  }
+  
+  &__rigth--conference {
+    background-image: url(../image/menu-conference/right.png);
+  }
+
+  &__wraper {
+    display: flex;
+    flex-direction: column;
+
+    @include onTablet {
+      flex-direction: row;
+    }
+  }
+
+  &__icon {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    text-decoration: none;
+    color: #fff;
+    font-size: $sub-title;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include onTablet {
+      // font-size: 25px;
+    }
+
+    @include onDesktop {
+      // font-size: 36px;
+      text-align-last: left;
+    }
+  }
+}

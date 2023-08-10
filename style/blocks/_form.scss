@@ -1,0 +1,256 @@
+.form {
+
+  &__subtext {
+    font-size: $sub-title;
+    font-weight: 350;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    text-align: center;
+
+    @include onDesktop {
+      // font-size: 27px;
+      width: max-content;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include onTablet {
+      margin-bottom: 70px;
+    }
+
+    &--conference {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include onTablet {
+      gap: 70px;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      gap: 125px;
+    }
+  }
+
+  &__left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include onTablet {
+      margin: 0 auto;
+      width: 70%;
+      gap: 70px;
+    }
+
+    @include onDesktop {
+      width: 50%;
+      gap: 80px;
+    }
+  }
+
+  &__right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include onTablet {
+      margin: 0 auto;
+      width: 70%;
+      gap: 70px;
+    }
+
+    @include onDesktop {
+      width: 50%;
+      gap: 80px;
+    }
+  }
+
+  &__style {
+    padding-left: 10px;
+    position: relative;
+    font-size: $simple-text;
+    font-weight: 350px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $brown;
+    height: 50px;
+    appearance: none;
+
+    @include onTablet {
+      font-size: $sub-title;
+    }
+
+    @include onDesktop {
+      // font-size: 24px;
+    }
+
+    &:focus {
+      outline: 1px solid $brown;
+    }
+
+    &::placeholder {
+      font-weight: 300px;
+      color: #000;
+    }
+  }
+
+  &__btn {
+    background-color: #fff;
+    border: none;
+  }
+
+  &__label {
+    position: absolute;
+    right: 5%;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__date,
+  &__event,
+  &__hall {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__button {
+    width: 100%;
+    height: 50px;
+    font-size: $sub-title;
+    font-weight: 500;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 33px;
+    border: none;
+    color: #fff;
+    background-color: $brown;
+    border: 1px solid $brown;
+    transition: all 0.5s;
+
+    @include onTablet {
+      width: 60%;
+    }
+
+    @include onDesktop {
+      width: 245px;
+      height: 50px;
+      // font-size: 32px;
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: $brown;
+    }
+  }
+
+  &__container {
+    &--text {
+      line-height: 35px;
+      padding-left: 10px;
+      position: relative;
+      font-weight: 350px;
+      width: 100%;
+      border: none;
+      height: 50px;
+      appearance: none;
+      font-size: 16px !important;
+
+      @include onTablet {
+        font-size: 20px !important;
+      }
+
+      @include onDesktop {
+        font-size: 24px !important;
+      }
+
+      &:focus {
+        outline: 1px solid $brown;
+      }
+
+      &::placeholder {
+        font-weight: 300px;
+        color: #000;
+      }
+    }
+
+    border-bottom: 1px solid $brown;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &__container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    transform: translateY(-75%);
+  }
+
+  &__container:hover input ~ .form__checkmark {
+    background-color: #ccc;
+  }
+
+  &__container input:checked ~ .form__checkmark {
+    background-color: $brown;
+  }
+
+  &__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  &__container input:checked ~ .form__checkmark:after {
+    display: block;
+  }
+
+  &__container .form__checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}

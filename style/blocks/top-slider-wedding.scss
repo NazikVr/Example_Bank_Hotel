@@ -1,0 +1,110 @@
+.slider {
+  overflow: hidden;
+  position: relative;
+
+
+  &__item {
+    width: 1160px;
+    position: relative;
+    text-align: center;
+  }
+
+  &__item .top-wedding {
+    visibility: hidden;
+  }
+
+  &__item, .slick-active .top-wedding {
+    visibility: visible;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    height: 100%;
+  }
+  
+  &__item img { 
+    position: relative;
+    height: 665px;
+    
+    width: 100%;
+
+    @include onTablet {
+      // width: 67%;
+    }
+    
+    @include onDesktop {
+      width: 100%;
+    }
+  }
+}
+
+.slick {
+  &-track {
+    display: flex;
+  }
+
+  &-arrow {
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    border: none;
+    z-index: 99;
+    font-size: 0;
+    width: 18px;
+    height: 30px;
+
+    @include onDesktop {
+      visibility: visible;
+    }
+  }
+  
+  &-prev {
+    left: 22%;
+    background: url("../image/arrow-left.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-next {
+    background: url("../image/arrow-right.png");
+    right: 22%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-dots {
+    z-index: 99;
+    position: relative;
+    top: -70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-dots li {
+    list-style: none;
+    margin: 0 10px;
+  }
+  
+  &-dots button {
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: rgba(90, 90, 90, 0.3);
+    border: none;
+
+    @include onTablet{
+      height: 20px;
+      width: 20px;
+    }
+
+    @include onDesktop {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &-dots li.slick-active button {
+    background-color: rgba(150, 150, 150, 0.9);
+  }
+}

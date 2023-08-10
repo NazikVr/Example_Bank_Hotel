@@ -1,0 +1,260 @@
+.scheme {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__count {
+    font-size: $sub-title;
+    font-weight: 700;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &--conference {
+      justify-content: space-around;
+      // margin-bottom: 50px;
+      margin-bottom: 15px;
+
+      @include onDesktop {
+        // margin-bottom: 15px;
+        justify-content: space-between;
+        margin-bottom: 0;
+      }
+    }
+
+    &--wedding {
+      @include onDesktop {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__scheme {
+      // background-image: url(../../image/scheme_1.png);
+      // background-position: center;
+      // width: 240px;
+      // height: 340px;
+    }
+  }
+
+  &__flex-wraper-all {
+    position: relative;
+    top: 30px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__flex-wraper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: $sub-title;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+
+    &--lounge {
+      font-size: $sub-title;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    @include onDesktop {
+      text-align: left;
+    }
+
+    &--conference {
+      text-align: center;
+      text-transform: none;
+      font-weight: 700;
+      font-size: $main-title;
+      // margin-bottom: 50px;
+
+      @include onDesktop {
+        // font-size: $sub-title;
+        // margin-bottom: 0;
+      }
+    }
+
+    &--wedding {
+      text-align: center;
+      font-weight: 700;
+      font-size: $main-title;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 350;
+    font-size: $sub-title;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include onDesktop {
+      text-align: left;
+      // font-size: 27px;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background-color: $brown;
+    margin-bottom: 30px;
+
+    @include onDesktop {
+      width: 33%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: $brown;
+      width: 100%;
+      height: 3px;
+      position: relative;
+      left: 0;
+      top: 3px;
+
+      @include onDesktop {
+        width: 24.5%;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 350;
+    font-size: $simple-text;
+    text-align: center;
+    
+    &--lounge {
+      text-align: center;
+      font-size: $simple-text;
+      line-height: 70px;
+      font-weight: 550;
+    }
+
+    @include onDesktop {
+      text-align: left;
+      // font-size: 22px;
+    }
+
+    &--conference {
+      font-size: $simple-text;
+      font-weight: 700;
+      text-align: center;
+
+      @include onTablet {
+        text-align: left;
+        // font-size: 17px;
+      }
+    }
+  }
+
+  &__midle {
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include onTablet {
+      // margin-bottom: 50px;
+    }
+
+    @include onDesktop {
+      // margin-bottom: 40px;
+      justify-content: space-between;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: $sub-title;
+    width: 50%;
+    height: 40px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #fff;
+    background-color: $brown;
+    border-radius: 33px;
+    text-transform: uppercase;
+    border: 2px solid $brown;
+    transition: color 0.8s ease, background-color 0.8s ease;
+
+    &:hover {
+      color: $brown;
+      background-color: #fff;
+    }
+  }
+
+  &__tabs-title {
+    text-align: center;
+    margin-bottom: 50px;
+
+    @include onDesktop {
+      font-size: $sub-title;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__tabs {
+    list-style: none;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    
+    justify-content: space-between;
+
+    @include onDesktop {
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+  }
+  &__tab-wraper {
+    width: 29%;
+  }
+  
+  &__tab { 
+    width: 100% !important;
+    cursor: pointer;
+    padding: 10px 20px!important;
+    border-radius: 30px !important;
+    text-transform: uppercase;
+
+    color: #fff !important;
+    background-color: rgba($color: #fff, $alpha: 0) !important;
+    border: 2px solid #fff !important;
+    transition: all 0.8s ease !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+
+    @include onDesktop {
+      padding: 5px 10px !important;
+      font-size: 10px !important;
+    }
+  }
+
+  &__tab.active {
+    border: 2px solid $brown !important;
+    color: $brown !important;
+  }
+
+  &__content {
+  }
+
+  &__content.active {
+  }
+}

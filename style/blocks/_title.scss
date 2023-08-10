@@ -1,0 +1,51 @@
+.title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  &__before-line {
+    width: 25%;
+    height: 2px;
+    background-color: $brown;
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: $brown;
+      width: 24.5%;
+      height: 3px;
+      position: relative;
+      left: 75.5%;
+      top: 3px;
+    }
+  }
+  &__text {
+    font-size: $main-title;
+    font-weight: 600;
+
+    @include onSmallTablet {
+      // font-size: 33px;
+    }
+
+    @include onDesktop {
+      // font-size: 42px;
+    }
+  }
+  &__after-line {
+    height: 2px;
+    width: 25%;
+    background-color: $brown;
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: $brown;
+      width: 24.5%;
+      height: 3px;
+      position: relative;
+      top: 3px;
+    }
+  }
+}

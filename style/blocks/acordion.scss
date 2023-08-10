@@ -1,0 +1,43 @@
+.accordion {
+  
+  &__title {
+    font-size: 16px !important;
+    padding: 30px 0 30px 0 !important;
+  }
+
+  &__cont {
+    padding: 0 0 30px 45px !important;
+
+    &--last {
+      border-bottom: 1px solid #ddd !important;
+    }
+  }
+
+  &__list {
+    list-style-image: url('./../image/ac-ar.png') !important;
+  }
+}
+.ui-state-active, .ui-state-default {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-color: #ddd !important;
+}
+
+.accordion .ui-icon {
+  margin-right: 10px !important;
+  background-image: url(./../image/ac-im-close.png) !important;
+  background-position: center !important;
+  width: 39px !important;
+  height: 39px !important;
+}
+
+.ui-icon:target {
+  background-image: url(./../image/ac-im-open.png) !important;
+}
+
+.ui-widget-content {
+  border: none !important;
+}

@@ -1,0 +1,115 @@
+.top-wedding {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 75px;
+
+  &__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: $main-title;
+    margin-bottom: 70px;
+    font-weight: 600;
+
+    @include onSmallTablet {
+    // font-size: 40px;
+    }
+
+    @include onTablet {
+      // font-size: 50px;
+    }
+
+    @include onDesktop {
+      font-size: $top-title;
+    }
+  }
+
+  &__subtitle {
+    max-width: 800px;
+    font-weight: 500;
+    font-size: $simple-text;
+    color: #fff;
+    margin-bottom: 30px;
+
+    @include onSmallTablet {
+      // font-size: 20px;
+    }
+
+    @include onDesktop {
+      font-size: $sub-title;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 33px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: $simple-text;
+    font-weight: 700;
+    background-color: $brown;
+    width: 20%;
+    height: 50px;
+    margin-bottom: 80px;
+
+    @include onSmallTablet {
+    // font-size: 20px;
+    width: 400px;
+    }
+
+    @include onTablet {
+      // font-size: 25px;
+      height: 65px;
+      width: 500px;
+    }
+
+    @include onDesktop {
+      font-size: $sub-title;
+      width: 374px;
+      height: 65px;
+    }
+
+    border: 2px solid $brown;
+    transition: background-color, color, 0.3s;
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      color: $brown;
+    }
+  }
+
+  &__text {
+    max-width: 950px;
+    font-size: $sub-title;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 65px;
+  }
+
+  &__call {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: $sub-title;
+    color: #fff;
+    transition: all 0.8s ease;
+
+    @include onTablet {
+    font-size: 50px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      color: $brown;
+    }
+  }
+}

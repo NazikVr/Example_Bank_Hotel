@@ -1,0 +1,67 @@
+.menu {
+  
+  &__left{
+    background-image: url(../image/background_coffe.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+  }
+  &__shadow {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+
+  &__rigth {
+    background-image: url(../image/background__furshet.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+  }
+
+  &__wraper {
+    display: flex;
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+  }
+  &__text {
+    text-decoration: none;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  &__arrow {
+  }
+}
+
+
+<section class="menu">
+<div class="container menu__wraper">
+  <article class="menu__left">
+    <a href="#" class="menu__shadow">
+      <img src="image/coffe_menu.png" alt="" class="menu__icon">
+      <div class="menu__text">
+        Меню каво-перерв
+      </div>
+      <img src="image/arrow.png" alt="" class="menu__arrow">
+    </a>
+  </article>
+  <article class="menu__rigth">
+    <a href="#" class="menu__shadow">
+      <img src="image/coffe_menu.png" alt="" class="menu__icon">
+      <div class="menu__text">
+        Меню фуршету
+      </div>
+      <img src="image/arrow.png" alt="" class="menu__arrow">
+    </a>
+  </article>
+</div>
+</section>
