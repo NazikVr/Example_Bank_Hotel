@@ -1,8 +1,9 @@
 .top {
+  position: relative;
   height: 665px;
   padding-top: 175px;
   padding-bottom: 30px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../image/congress_hall-1.jpg);
+  // background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../image/congress_hall-1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,7 +24,19 @@
     padding-bottom: 75px;
   }
 
+  &__video {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
   &__title {
+    // position: relative;
+    z-index: 10;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -48,6 +61,8 @@
   }
 
   &__subtitle {
+    // position: relative;
+    z-index: 10;
     display: none;
     font-weight: 500;
     line-height: 150%;
@@ -78,6 +93,8 @@
   }
 
   &__button {
+    // position: relative;
+    z-index: 10;
     text-align: center;
     display: flex;
     align-items: center;
@@ -121,6 +138,8 @@
   }
 
   &__text {
+    // position: relative;
+    z-index: 10;
     display: none;
     font-weight: 500;
     font-size: $simple-text;
@@ -141,6 +160,8 @@
   }
 
   &__call {
+    // position: relative;
+    z-index: 10;
     display: block;
     font-weight: 500;
     text-decoration: none;
@@ -171,4 +192,8 @@
       color: $brown;
     }
   }
+}
+.top .container {
+  position: relative;
+  z-index: 10;
 }
